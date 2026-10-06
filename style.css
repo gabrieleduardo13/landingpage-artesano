@@ -12,13 +12,16 @@ body {
 }
 
 .abertura {
-  width: 100%;
-  height: 100vh;
-  background-color: #111;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
+    width: 100%;
+    min-height: 100vh; /* O guia usa min-height em vez de height fixo[cite: 4] */
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.58), rgba(0, 0, 0, 0.58)), 
+        url("./img/hero-atelie.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .textos-abertura {
@@ -62,9 +65,93 @@ body {
     height: 100%;
     background-color: rgba(255, 9, 9, 0.5); 
     z-index: 2;
-    opacity: 2.5;
+    opacity: 1;
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
 
 
 
+}
+
+.navbar ul {
+    display: flex; /* Coloca os itens da lista lado a lado[cite: 6] */
+    justify-content: center; /* Centraliza todo o menu na tela[cite: 6] */
+    list-style: none; /* Remove aquelas bolinhas padrão da lista[cite: 6] */
+    gap: 24px; /* Cria um espaço de respiro entre as palavras[cite: 6] */
+    padding: 20px;
+    background-color: #f4f4f5; /* Fundo cinza claro para a barra[cite: 6] */
+}
+
+.navbar ul li a {
+    text-decoration: none; /* Tira o sublinhado de link[cite: 7] */
+    color: #000; /* Deixa a letra preta em vez do azul padrão[cite: 7] */
+}
+
+.navbar {
+    position: sticky; /* Faz a barra rolar com a página até colar[cite: 6] */
+    top: 0; /* Define o ponto onde ela vai grudar (0px do topo)[cite: 6] */
+    z-index: 10; /* Garante que a barra fica por cima de tudo o que passar por baixo[cite: 6] */
+}
+
+.navbar ul li a:hover {
+    color: #555; /* Altera a cor do texto para um cinzento médio[cite: 7] */
+    transition: color 0.3s; /* Faz a mudança de cor acontecer suavemente em 0,3s[cite: 7] */
+}
+
+.estudio {
+    text-align: center; /* Centra o título e o parágrafo[cite: 8] */
+    padding: 60px 20px; /* Dá um respiro à secção[cite: 8] */
+}
+
+.etapas-estudio {
+    display: flex; /* Coloca as quatro etapas na mesma linha[cite: 9] */
+    gap: 20px; /* Cria espaço entre as etapas[cite: 9] */
+    max-width: 900px; /* Limita a largura total[cite: 9] */
+    margin: 40px auto 0; /* Centra a caixa das etapas no ecrã[cite: 9] */
+}
+
+.etapa {
+    flex: 1; /* Faz com que todas as etapas dividam o espaço em partes iguais[cite: 9, 24] */
+}
+
+.catalogo {
+    background: #1f2123; /* Fundo cinzento muito escuro[cite: 11] */
+    color: #f4f4f5; /* Texto claro para dar contraste[cite: 11] */
+    text-align: center; /*[cite: 11] */
+    padding: 80px 20px;
+}
+
+.tabela-catalogo {
+    margin: 40px auto; /* Centra a tabela no ecrã[cite: 12] */
+    border-collapse: collapse; /* Une as bordas da tabela numa só linha limpa[cite: 12] */
+    width: 100%;
+    max-width: 400px;
+    text-align: left; /*[cite: 12] */
+}
+
+.botao-catalogo {
+    display: inline-block; /*[cite: 13] */
+    padding: 15px 30px; /*[cite: 13] */
+    background: #fff; /*[cite: 13] */
+    color: #1f2123; /*[cite: 13] */
+    border-radius: 999px; /* Arredonda totalmente os cantos (formato de pílula)[cite: 13] */
+    text-decoration: none; /* Remove o sublinhado do link[cite: 13] */
+}
+.depoimento {
+    background: #f8f8f8; /* Fundo quase branco para destacar do catálogo escuro[cite: 14] */
+    text-align: center; /*[cite: 14] */
+    padding: 40px 20px; /*[cite: 14] */
+}
+
+.depoimento blockquote {
+    font-size: 1.65rem; /* Aumenta o tamanho da citação[cite: 14] */
+    font-style: italic; /* Coloca o texto em itálico[cite: 14] */
+    max-width: 720px; /* Evita que o texto fique demasiado comprido nos ecrãs largos[cite: 14] */
+    margin: 0 auto 20px; /* Centra a caixa e afasta do nome[cite: 14] */
+}
+
+.depoimento cite {
+    display: block; /* Força o nome a ficar numa linha própria[cite: 14] */
+    font-size: 0.6rem; /*[cite: 14] */
+    text-transform: uppercase; /* Coloca as letras em maiúsculas visuais[cite: 14] */
+    letter-spacing: 0.28em; /* Aumenta o espaço entre as letras para dar elegância[cite: 14] */
 }
