@@ -251,3 +251,64 @@ section.dark {
   padding: 15px 40px;
   font-size: 24px;
 }
+
+/* CONTATO */
+/* CONTATO */
+#contato {
+    min-height: 75vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+/* CONTATO */
+#contato {
+    min-height: 75vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px; /* Reduzi um pouco o buraco entre os itens */
+}
+
+form .form-inline {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+form .form-inline div {
+    flex: 1; /* Faz o Nome e o E-mail dividirem o espaço 50/50 */
+}
+
+form .form-inline label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* O SEGREDO: Aplica o 100% APENAS nos inputs de texto e na caixa de recado */
+form input[type="text"], 
+form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    font-family: 'Jost', sans-serif;
+}
+
+/* Conserta o alinhamento das bolinhas (radio) e quadradinhos (checkbox) */
+.input-radio, .input-checkbox {
+    margin-bottom: 20px;
+}
+
+.input-radio input, .input-checkbox input {
+    width: auto; /* Impede que eles tentem ocupar 100% da tela */
+    margin-right: 8px; /* Dá um espacinho entre a bolinha e a palavra */
+}
+
+.label-block {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
