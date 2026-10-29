@@ -5,6 +5,22 @@
     font-family: 'Jost', sans-serif;
 }
 
+:root{
+--white: #fff;
+--black: #000;
+--cinza-1: #6a6a6a;
+--cinza-2: #3a3d41;
+--cinza-3: #1f2124;
+--cinza-claro: #f4f4f5;
+--section-mite-height: 75vh;
+
+
+
+
+}
+
+
+
 body, html {
     min-height: 100%;
 }
@@ -15,7 +31,7 @@ body, html {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    color: #fff;
+    color: var(--white);
     position: relative;
     width: 100%;
     height: 50vh;
@@ -35,7 +51,7 @@ body, html {
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: black;
+    background-color: var(--black);
     opacity: 0.8;
 }
 
@@ -46,7 +62,7 @@ body, html {
 
 #hero h2::before, #hero h2::after {
     content: "";
-    border-top: 2px solid #fff;
+    border-top: 2px solid var(--white);
     width: 50px;
     display: flex;
 }
@@ -86,7 +102,7 @@ body, html {
     padding: 10px;
     position: sticky;
     top: 0;
-  background-color: #fff;
+  background-color: var(--white);
   
 }
 
@@ -105,7 +121,7 @@ body, html {
 
 .menu-link {
     text-decoration: none;
-    color: #6a6a6a;
+    color: var(--cinza-1);
     font-size: 14px;
     letter-spacing: 0.26em;
     position: sticky;
@@ -114,19 +130,19 @@ body, html {
 
 #menu-logo a {
     display: block;
-    border: 1px solid #000;
+    border: 1px solid var(--black);
     padding: 8px 10px;
     text-align: center;
-    color: black;
+    color: var(--black);
     letter-spacing: 0;
-    border-color: #6a6a6a;
+    border-color: var(--cinza-1);
     position: sticky;
     top: 0;
 }
 
 #menu-logo a:hover {
-    color: #6a6a6a;
-    border-color: #6a6a6a;
+    color: var(--cinza-1);
+    border-color: var(--cinza-1);
     position: sticky;
     top: 0;
 }
@@ -137,13 +153,13 @@ section {
 }
 
 section.light {
-    background-color: #f4f4f5;
-    color: #1f2124;
+    background-color: var(--cinza-claro);
+    color: var(--cinza-2);
 }
 
 section.dark {
-    background-color: #1f2123;
-    color: #f4f4f5;
+    background-color: var(--cinza-3);
+    color: var(--cinza-claro);
 }
 
 .section-title {
@@ -154,6 +170,7 @@ section.dark {
 
 /* ESTÚDIO */
 #estudio {
+    height: var(--section-mite-height);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -186,7 +203,7 @@ section.dark {
 
 /* COLEÇÕES (TABELA DARK) */
 #colecoes {
-  min-height: 75%;
+  min-height: var(--section-mite-height);
   justify-content: center;
   display: flex;
   flex-direction: column;
@@ -207,8 +224,8 @@ section.dark {
 #colecoes th, #colecoes td {
     text-align: left;
     padding: 15px 10px;
-    border-top: 1px solid #3a3d41;
-    border-bottom: 1px solid #3a3d41;
+    border-top: 1px solid var(--cinza-3);
+    border-bottom: 1px solid var(--cinza-3);
 }
 
 #colecoes table caption{
@@ -218,7 +235,7 @@ section.dark {
 
 #colecoes caption {
     margin-bottom: 15px;
-    color: #d4c9a8;
+    color: var(--cinza-2);
     letter-spacing: 0.26em;
     text-transform: uppercase;
     font-size: 12px;
@@ -234,8 +251,8 @@ section.dark {
     display: inline-block;
     margin-top: 30px;
     padding: 15px 30px;
-    background-color: #fff;
-    color: #000;
+    background-color: var(--white);
+    color: var(--black);
     text-decoration: none;
     border-radius: 999px;
     text-transform: uppercase;
@@ -245,8 +262,8 @@ section.dark {
 
 #colecoes a {
   text-decoration: none;
-  color:#000000;
-  border: 1px solid #000000;
+  color: var(--black);
+  border: 1px solid var(--black);
   border-radius: 50px;
   padding: 15px 40px;
   font-size: 24px;
@@ -255,7 +272,7 @@ section.dark {
 /* CONTATO */
 /* CONTATO */
 #contato {
-    min-height: 75vh;
+    min-height: var(--section-mite-height);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -264,7 +281,7 @@ section.dark {
 }
 /* CONTATO */
 #contato {
-    min-height: 75vh;
+    min-height:var(--section-mite-height);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -293,7 +310,7 @@ form input[type="text"],
 form textarea {
     width: 100%;
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid var(--cinza-2);
     font-family: 'Jost', sans-serif;
 }
 
@@ -311,4 +328,30 @@ form textarea {
     display: block;
     margin-bottom: 10px;
     font-weight: bold;
+}
+
+.menu-mobile{
+    display: none;
+}
+
+
+@media (max-width: 700px) {
+   .menu {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .menu.mobile {
+        display: block;
+    }
+
+    .menu-item {
+        display: none;
+    }
+
+    .menu-item#menu-logo {
+        display: block;
+    }
+
 }
